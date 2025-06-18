@@ -58,6 +58,22 @@ docker-compose up -d
 python index.py
 ```
 
+## テスト
+
+### ローカル環境でのテスト
+
+```bash
+# 依存関係をインストール後
+pytest test_main.py -v
+```
+
+### Docker環境でのテスト
+
+```bash
+# Docker Composeでアプリケーションを起動後
+docker-compose exec api pytest test_main.py -v
+```
+
 ## API エンドポイント
 
 - `GET /`: Hello Worldメッセージを返す
@@ -68,6 +84,7 @@ python index.py
 .
 ├── main.py              # FastAPIメインアプリケーション
 ├── index.py             # S3バケット一覧取得スクリプト
+├── test_main.py         # テストコード
 ├── requirements.txt     # Python依存関係
 ├── Dockerfile          # Dockerイメージ設定
 ├── docker-compose.yml  # Docker Compose設定
