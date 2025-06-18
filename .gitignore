@@ -29,3 +29,6 @@ Thumbs.db
 
 # AWS
 .aws/
+
+# Data files
+cloud_jigyosya.csv
